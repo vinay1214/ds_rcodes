@@ -1,0 +1,9 @@
+x=datasets::airquality
+head(x,10)
+boxplot(x[,-6])
+par(mfrow=c(3,3),mar=c(2,5,2,1),las=0,bty="o")
+plot(x$ozone)
+plot(x$Ozone,x$Wind)
+plot(x$Ozone,type="l")
+barplot(x$Ozone,horiz=TRUE)
+hist((x$Solar.R))
